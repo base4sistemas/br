@@ -1,6 +1,4 @@
 import 'package:br/br.dart';
-import 'package:br/src/errors.dart';
-import 'package:br/src/exceptions.dart';
 import 'package:test/test.dart';
 
 void main() {
