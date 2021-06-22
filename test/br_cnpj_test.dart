@@ -66,7 +66,7 @@ void main() {
     });
   });
 
-  group('Test Cnpj() constructor', () {
+  group('Test Cnpj() default constructor', () {
     test('CNPJ cannot have a root value lower than minimum lower limit', () {
       int value = Cnpj.rootLowerLimit - 1;
       expect(() => Cnpj(root: value), throwsA(isA<CnpjRootRangeError>()));
@@ -97,8 +97,8 @@ void main() {
           throwsA(isA<ImproperlyMaskedException>()));
     });
     test('Should throw if given CNPJ has invalid checksum digits', () {
-      expect(() => Cnpj.fromString('08.427.847.0001.68'),
-          throwsA(isA<ImproperlyMaskedException>()));
+      expect(() => Cnpj.fromString('08.427.847/0001-68'),
+          throwsA(isA<InvalidChecksumException>()));
     });
     test('Should throw if given CNPJ is made up of same digit', () {
       expect(() => Cnpj.fromString('00.000.000/0000-00'),
