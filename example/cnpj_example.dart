@@ -24,4 +24,16 @@ void main() {
   print('root: ${cnpj.root}');
   print('branch: ${cnpj.branch}');
   print('checksum: ${cnpj.checksum}');
+
+  // Following example show how to just validate CNPJ numbers
+  // without the need to create Cnpj instances.
+  List<String> numbers = [
+    '08.427.847/0001-69',
+    '00.000.000/0001-91',
+    '00.000.000/4248-03',
+    '07.427.847/0001-69'
+  ];
+  for (String number in numbers) {
+    print('CNPJ $number is ${isCnpj(number) ? 'valid' : 'not valid'}!');
+  }
 }
