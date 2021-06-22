@@ -1,5 +1,3 @@
-// TODO: Put public facing types in this file.
-
 import './errors.dart';
 import './exceptions.dart';
 import './utils.dart';
