@@ -5,4 +5,5 @@ export 'src/cnpj.dart';
 export 'src/cpf.dart';
 export 'src/errors.dart';
 export 'src/exceptions.dart';
+export 'src/states.dart';
 export 'src/utils.dart';
